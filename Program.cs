@@ -11,112 +11,113 @@ namespace Patterns_C_
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter the number : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(n);
             //Pattern 1 - Hollow Square
             Console.WriteLine("Pattern 1 - Hollow Square");
             Console.WriteLine();
-            Pattern1();
+            Pattern1(n);
             Console.WriteLine();
 
             //Pattern 2 - Number Triangle
             Console.WriteLine("Pattern 2 - Number Triangle");
             Console.WriteLine();
-            Pattern2();
+            Pattern2(n);
             Console.WriteLine();
 
             //Pattern 3 - Increasing Number Triangle
             Console.WriteLine("Pattern 3 - Increasing Number Triangle");
             Console.WriteLine();
-            Pattern3();
+            Pattern3(n);
             Console.WriteLine();
 
             //Pattern 4 - Number-increasing reverse Pyramid Pattern
             Console.WriteLine("Pattern 4 - Number-increasing reverse Pyramid Pattern");
             Console.WriteLine();
-            Pattern4();
+            Pattern4(n);
             Console.WriteLine();
 
             //Pattern 5 - Number-changing Pyramid Pattern
             Console.WriteLine("Pattern 5 - Number-changing Pyramid Pattern");
             Console.WriteLine();
-            Pattern5();
+            Pattern5(n);
             Console.WriteLine();
 
             //Pattern 6 - Zero-One Triangle Pattern
             Console.WriteLine("Pattern 6 - Zero-One Triangle Pattern");
             Console.WriteLine();
-            Pattern6();
+            Pattern6(n);
             Console.WriteLine();
 
             //Pattern 7 - Palindrome Triangle Pattern
             Console.WriteLine("Pattern 7 - Palindrome Triangle Pattern");
             Console.WriteLine();
-            Pattern7();
+            Pattern7(n);
             Console.WriteLine();
 
             //Pattern 8 - Rhombus Pattern
             Console.WriteLine("Pattern 8 - Rhombus Pattern");
             Console.WriteLine();
-            Pattern8();
+            Pattern8(n);
             Console.WriteLine();
 
             //Pattern 9 - Diamond Star Pattern
             Console.WriteLine("Pattern 9 - Diamond Star Pattern");
             Console.WriteLine();
-            Pattern9();
+            Pattern9(n);
             Console.WriteLine();
 
             //Pattern 10 - Mirror Image Triangle Pattern
             Console.WriteLine("Pattern 10 - Mirror Image Triangle Pattern");
             Console.WriteLine();
-            Pattern10();
+            Pattern10(n);
             Console.WriteLine();
 
             //Pattern 11 - Hollow Triangle Pattern
             Console.WriteLine("Pattern 11 - Hollow Triangle Pattern");
             Console.WriteLine();
-            Pattern11();
+            Pattern11(n);
             Console.WriteLine();
 
             //Pattern 12 - Hollow Reverse Triangle Pattern
             Console.WriteLine("Pattern 12 - Hollow Reverse Triangle Pattern");
             Console.WriteLine();
-            Pattern12();
+            Pattern12(n);
             Console.WriteLine();
 
             //Pattern 13 - Hollow Diamond Pyramid
             Console.WriteLine("Pattern 13 - Hollow Diamond Pyramid");
             Console.WriteLine();
-            Pattern13();
+            Pattern13(n);
             Console.WriteLine();
 
             //Pattern 14 - Hollow Hourglass Pattern
             Console.WriteLine("Pattern 14 - Hollow Hourglass Pattern");
             Console.WriteLine();
-            Pattern14();
+            Pattern14(n);
             Console.WriteLine();
 
 
             //Pattern 15 - Pascal Triangle
             Console.WriteLine("Pattern 15 - Pascal Triangle");
             Console.WriteLine();
-            Pattern15();
+            Pattern15(n);
             Console.WriteLine();
 
         }
 
-        static void Pattern1()
+        static void Pattern1(int n)
         {
-            int height = 5;
-            int width = 6;
 
             // for  row
-            for (int i = 0; i < height; i++)
+            for (int i = 1; i <= n; i++)
             {
                 // for  column 
-                for (int j = 0; j < width; j++)
+                for (int j = 1; j <= n; j++)
                 {
 
-                    if (i == 0 || i == height - 1 || j == 0 || j == width - 1)
+                    if (i == 1 || i == n || j == 1 || j == n)
                     {
                         Console.Write("*");
                     }
@@ -130,13 +131,13 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern2()
+        static void Pattern2(int n)
         {
-            int row = 6;
-            for (int i = 1; i <= row; i++)
+            
+            for (int i = 1; i <= n; i++)
             {
                 // to print spaces
-                for (int j = 1; j <= row - i; j++)
+                for (int j = 1; j <= n - i; j++)
                 {
                     Console.Write(" ");
                 }
@@ -152,11 +153,11 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern3()
+        static void Pattern3(int n)
         {
-            int row = 6;
+            
             //for rows
-            for (int i = 1; i <= row; i++)
+            for (int i = 1; i <= n; i++)
             {
                 //for column
                 for (int j = 1; j <= i; j++)
@@ -171,17 +172,17 @@ namespace Patterns_C_
         }
 
 
-        static void Pattern4()
+        static void Pattern4(int n)
         {
-            int row = 6;
+           
 
             //for rows
-            for (int i = 0; i < row; i++)
+            for (int i = 0; i < n; i++)
             {
                 //for columns 
-                for (int j = row; j > i; j--)
+                for (int j = n; j > i; j--)
                 {
-                    Console.Write(row - j + 1 + " ");
+                    Console.Write(n - j + 1 + " ");
                 }
 
                 //next line 
@@ -189,19 +190,19 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern5()
+        static void Pattern5(int n)
         {
-            int row = 6;
-            int n = 1;
+           
+            int n1 = 1;
 
             //for rows
-            for (int i = 1; i <= row; i++)
+            for (int i = 1; i <= n; i++)
             {
                 //for columns
                 for (int j = 1; j <= i; j++)
                 {
-                    Console.Write(n + " ");
-                    n = n + 1;
+                    Console.Write(n1 + " ");
+                    n1 = n1 + 1;
                 }
 
                 //next line 
@@ -210,12 +211,12 @@ namespace Patterns_C_
 
         }
 
-        static void Pattern6()
+        static void Pattern6(int n)
         {
             int start = 1;
-            int row = 5;
+            
             //for rows
-            for (int i = 0; i <= row; i++)
+            for (int i = 0; i <= n; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -236,13 +237,13 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern7()
+        static void Pattern7(int n)
         {
-            int row = 6;
-            for (int i = 1; i <= row; i++)
+            
+            for (int i = 1; i <= n; i++)
             {
                 // for spaces
-                for (int j = 1; j <= row - i; j++)
+                for (int j = 1; j <= n - i; j++)
                 {
                     Console.Write("  ");
                 }
@@ -263,19 +264,19 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern8()
+        static void Pattern8(int n)
         {
-            int row = 6;
-            for (int i = 1; i <= row; i++)
+            
+            for (int i = 1; i <= n;  i++)
             {
                 // for spaces
-                for (int j = 1; j <= row - i; j++)
+                for (int j = 1; j <= n - i; j++)
                 {
                     Console.Write(" ");
                 }
 
 
-                for (int k = 1; k <= row; k++)
+                for (int k = 1; k <= n; k++)
                 {
                     Console.Write("*");
                 }
@@ -285,18 +286,18 @@ namespace Patterns_C_
         }
 
 
-        static void Pattern9()
+        static void Pattern9(int n)
         {
 
-            int N =5;
+           
 
             //for erected pyramid
 
             // for the rows.
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
                 //for spaces
-                for (int j = 0; j < N - i - 1; j++)
+                for (int j = 0; j < n - i - 1; j++)
                 {
                     Console.Write(" ");
                 }
@@ -316,7 +317,7 @@ namespace Patterns_C_
             
             //for inverted pyramid
             //for rows
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
                 //for spaces
                 for (int j = 0; j < i; j++)
@@ -325,7 +326,7 @@ namespace Patterns_C_
                 }
 
                 // printing the stars in each row
-                for (int j = 0; j < 2 * N - (2 * i + 1); j++)
+                for (int j = 0; j < 2 * n - (2 * i + 1); j++)
                 {
 
                     Console.Write("*");
@@ -338,13 +339,13 @@ namespace Patterns_C_
 
         } 
 
-        static void Pattern10()
+        static void Pattern10(int n)
         {
-            int N = 6;
+            
 
             //for inverted pyramid
             //for rows
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < n; i++)
             {
                 //for spaces
                 for (int j = 0; j < i; j++)
@@ -353,7 +354,7 @@ namespace Patterns_C_
                 }
 
                 // printing increasing number
-                for (int j = i+1; j <=N; j++)
+                for (int j = i+1; j <=n; j++)
                 {
 
                     Console.Write(j+" ");
@@ -366,16 +367,16 @@ namespace Patterns_C_
             //for erected pyramid
 
             // for the rows.
-            for (int i = 1; i < N; i++)
+            for (int i = 1; i < n; i++)
             {
                 //for spaces
-                for (int j = 1; j < N- i ; j++)
+                for (int j = 1; j < n - i ; j++)
                 {
                     Console.Write(" ");
                 }
 
                 //  printing the increasing number 
-                for (int j = N-i; j <=  N; j++)
+                for (int j = n - i; j <=  n; j++)
                 {
 
                     Console.Write(j+" ");
@@ -388,9 +389,9 @@ namespace Patterns_C_
 
         }
 
-        static void Pattern11()
+        static void Pattern11(int n )
         {
-            int n = 6;
+            
             for (int i = 1; i <= n; i++)
             {
                 // Print spaces
@@ -411,9 +412,9 @@ namespace Patterns_C_
         }
 
 
-        static void Pattern12()
+        static void Pattern12(int n)
         {
-            int n = 6;
+            
             for (int i = n; i >= 1; i--)
             {
                 // Print spaces
@@ -433,9 +434,9 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern13()
+        static void Pattern13(int n)
         {
-            int n = 6;
+            
             for (int i = 1; i <= n; i++)
             {
                 for (int j = 1; j <= n - i; j++)
@@ -464,9 +465,9 @@ namespace Patterns_C_
             }
         }
 
-        static void Pattern14()
+        static void Pattern14(int n)
         {
-            int n = 6;
+            
             for (int i = 0; i < n; i++)
             {
                 // Print  spaces
@@ -511,13 +512,13 @@ namespace Patterns_C_
 
 
 
-        static void Pattern15()
+        static void Pattern15(int n)
         {
-            int N = 4;
-            for(int i = 1; i<=N; i++)
+            
+            for(int i = 1; i<=n; i++)
             {
                 int b = 1;
-                for(int j = 0; j <= N-i; j++)
+                for(int j = 0; j <= n -i; j++)
                 {
                     Console.Write(" ");
                 }
